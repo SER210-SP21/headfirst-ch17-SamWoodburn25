@@ -19,8 +19,13 @@
         android:name="edu.quinnipiac.ser210.tasks.EditTaskFragment"
         android:label="fragment_edit_task"
         tools:layout="@layout/fragment_edit_task" >
+        <argument
+            android:name="taskId"
+            app:argType="long" />
         <action
             android:id="@+id/action_editTaskFragment_to_tasksFragment"
-            app:destination="@id/tasksFragment" />
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
